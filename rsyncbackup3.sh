@@ -1472,7 +1472,7 @@ EOT
 backup_success_report() {
 
   status "Sending success report for backup source \"$sourcehost\" destination \"$desthost\"."
-  
+
   attachment=
   if [ "$rsyncstart" = "1" ]; then
     if [ "$backupgziplog" = "1" ]; then
@@ -1483,7 +1483,7 @@ backup_success_report() {
   fi
 
   LANG=en_GB
-  EMAIL=$backupemailfrom $MUTT -s "Rsync backup for $sourcehost to $backupdest on $(date) was successful" "$attachment" "$backupemailsuccess" <<EOT
+  EMAIL=$backupemailfrom $MUTT -s "Rsync backup for $sourcehost to $backupdest on $(date) was successful" $attachment "$backupemailsuccess" <<EOT
 Rsync backup for $sourcehost to $backupdest on $(date) was successful
 
 Source: $backupsource
@@ -1516,7 +1516,7 @@ backup_failure_report() {
   fi
 
   LANG=en_GB
-  EMAIL=$backupemailfrom $MUTT -s "Rsync backup for $sourcehost to $backupdest on $(date) FAILED" "$attachment" "$backupemailfailure" <<EOT
+  EMAIL=$backupemailfrom $MUTT -s "Rsync backup for $sourcehost to $backupdest on $(date) FAILED" $attachment "$backupemailfailure" <<EOT
 Rsync backup for $sourcehost to $backupdest on $(date) FAILED
 
 Source: $backupsource
