@@ -119,13 +119,13 @@ $backuphost:/mnt/backup/rbackup
 # Enter files to exclude here, like temp files and sockets
 
 backupexclude="\
+/lost+found
 /tmp
 /dev
 /proc
 /run
 /sys
 /media
-/lost+found
 /var/cache
 /var/tmp
 /var/run
@@ -143,50 +143,18 @@ backupexclude="\
 /var/lib/dhcp6/dev
 /var/lib/dhcp6/proc
 /var/lib/docker
-/mnt/*/backup*
-/mnt/*/Backup*
-/home/*/temp
-/home/*/Temp
-/home/*/backup
-/home/*/Backup
-/home/*/build
 /home/*/.xsession-errors*
 /home/*/.local/share/Trash
 /home/*/.local/share/akonadi
 /home/*/.cache
-/home/*/.thumbnails
-/home/*/.qt
-/home/*/.gvfs
-/home/*/.dbus
-/home/*/.netx
-/home/*/.beagle
+/home/*/.ccache
 /home/*/.pulse-cookie
 /home/*/.pulse
-/home/*/.xine
-/home/*/.mcop
-/home/*/.java
-/home/*/.adobe
-/home/*/.macromedia
 /home/*/.config/google-chrome/Default/Local Storage/*
 /home/*/.config/google-chrome/Cookies*
 /home/*/.config/google-chrome/History*
 /home/*/.config/google-chrome/Default/Application Cache
 /home/*/.mozilla/firefox/*/Cache*
-/home/*/.opera/cache
-/home/*/.mythtv/*cache
-/home/*/.xmltv/cache
-/home/*/.googleearth
-/home/*/.wine
-/home/*/.wine_*
-/home/*/.kde/cache-*
-/home/*/.kde/tmp-*
-/home/*/.kde/socket-*
-/home/*/.kde4/cache-*
-/home/*/.kde4/tmp-*
-/home/*/.kde4/socket-*
-/home/*/.kde4/share/apps/nepomuk
-/home/*/.kde/share/apps/amarok/albumcovers/cache
-/mnt/data/Images
 "
 
 # Variables - Don't change this.
